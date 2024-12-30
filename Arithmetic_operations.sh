@@ -1,43 +1,43 @@
 #!/bin/bash
 
-echo "it's time to do addition using functions"
+echo "it's time to do Arithmetic Operations using functions"
 
 echo "Enter the first Number:" 
-read $1
+read num1
 echo "Enter the second Number:" 
-read $2
+read num2
 
 sum(){
-    sum=$(($1+$2))
+    sum=$(($num1+$num2))
     echo "sum of $1 and $2 :" $sum
 }
 
-sum $1 $2
+sum $num1 $num2
 
 sub(){
-    sub=$(($1-$2))
+    sub=$(($num1-$num2))
     echo "sub 0f $1 and $2 :" $sub
 }
 
-sub $1 $2
+sub $num1 $num2
 
 mul(){
-    mul=$(($1*$2))
+    mul=$(($num1*$num2))
     echo "Mul of $1 and $2 : " $mul
 }
 
-mul $1 $2
+mul $num1 $num2
 
 Div(){
-    div=$(($1/$2))
+    div=$(($num1/$num2))
     echo "Div of $1 and $2 : " $div
 }
 
-Div $1 $2
+Div $num1 $num2
 
 mod(){
     mod=$(($1%$2))
     echo "Mod of $1 and $2 : " $mod
 }
 
-mod $1 $2
+mod $num1 $num2
