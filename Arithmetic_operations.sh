@@ -2,8 +2,10 @@
 
 echo "it's time to do addition using functions"
 
-echo "Enter the first Number:" $1
-echo "Enter the second Number:" $2
+echo "Enter the first Number:" 
+read $1
+echo "Enter the second Number:" 
+read $2
 
 sum(){
     sum=$(($1+$2))
