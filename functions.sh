@@ -7,3 +7,4 @@ sum (){
     echo "sum of $1 and $2 :" $sum
 }
 
+sum 5 6
