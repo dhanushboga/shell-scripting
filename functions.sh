@@ -27,7 +27,7 @@ mul(){
 mul $1 $2
 
 Div(){
-    div=$(($1/$2))
+    div=$(($1 / $2))
     echo "Div of $1 and $2 : " $Div
 }
 
