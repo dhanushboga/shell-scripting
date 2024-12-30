@@ -41,3 +41,5 @@ mod(){
 }
 
 mod $num1 $num2
+
+echo "wow it's completed the arithmetic operations for $num1 and $num2"
