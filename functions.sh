@@ -11,3 +11,10 @@ sum(){
 }
 
 sum $1 $2
+
+sub(){
+    sub=$(($1-$2))
+    echo "sub 0f $1 and $2 :" $sub
+}
+
+sub $1 $2
