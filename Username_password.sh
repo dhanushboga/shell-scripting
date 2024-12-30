@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Please provide your User Name"
+echo "Please provide your User Name :"
 read USERNAME
 
-echo "Enter your password"
+echo "Enter your password :"
 read -s PASSWORD
 
-echo "enter user name :" $USERNAME
-echo "password :" $PASSWORD
+echo "Your Entered user name :" $USERNAME
+echo "Your Entered password  :" $PASSWORD
