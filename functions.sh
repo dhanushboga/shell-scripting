@@ -18,3 +18,24 @@ sub(){
 }
 
 sub $1 $2
+
+mul(){
+    mul=$(($1*$2))
+    echo "Mul of $1 and $2 : " $mul
+}
+
+mul $1 $2
+
+Div(){
+    div=$(($1/$2))
+    echo "Div of $1 and $2 : " $Div
+}
+
+Div $1 $2
+
+mod(){
+    mod=$(($1%$2))
+    echo "Mod of $1 and $2 : " $mod
+}
+
+mod $1 $2
