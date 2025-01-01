@@ -1,6 +1,10 @@
 #!/bin/bash
 
 echo "The Script Name : $0"
+echo "Present working directory: $PWD"
+echo "Home directory of current user: $HOME"
+echo "Which user is running this script: $USER"
+echo "Process id of current script: $$"
 
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]
@@ -25,11 +29,11 @@ else
    echo "Git is already installed"
 fi
 
-dnf list installed mysqll
+dnf list installed mysql
 
 if [ $? -ne 0 ]
    then 
-   dnf install mysqll -y
+   dnf install mysql -y
    if [ $? -ne 0 ]
    then
       echo "installing mysql.......failure"
