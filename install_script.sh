@@ -6,11 +6,6 @@ echo "Home directory of current user: $HOME"
 echo "Which user is running this script: $USER"
 echo "Process id of current script: $$"
 
-LOGS_FOLDER="/var/log/expense1"
-LOG_FILE="$LOGS_FOLDER/$0.log"
-mkdir -p $LOGS_FOLDER
-
-
 
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]
@@ -19,11 +14,11 @@ then
    exit 1
 fi
 
-dnf list installed git &>>$LOGS_FOLDER
+dnf list installed git
 
 if [ $? -ne 0 ]
   then
-    dnf install git -y &>>$LOGS_FOLDER
+    dnf install git -y 
     if [$? -ne 0 ]
     then
       echo "installing Git.......failure"
@@ -35,11 +30,11 @@ else
    echo "Git is already installed"
 fi
 
-dnf list installed mysql &>>$LOGS_FOLDER
+dnf list installed mysql
 
 if [ $? -ne 0 ]
    then 
-   dnf install mysql -y &>>$LOGS_FOLDER
+   dnf install mysql -y
    if [ $? -ne 0 ]
    then
       echo "installing mysql.......failure"
