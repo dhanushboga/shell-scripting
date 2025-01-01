@@ -7,3 +7,32 @@ then
    exit 1
 fi
 
+dnf list installed git
+
+if [ $? -ne 0 ]
+  then
+    dnf install git -y
+    if [$? -ne 0 ]
+    then
+      echo "installing Git.......failure"
+    else
+      echo "installing Git........success"
+    fi
+else
+   echo "Git is already installed"
+fi
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+   then 
+   dnf install mysql-server -y
+   if [ $? -ne 0 ]
+   then
+      echo "installing mysql-server.......failure"
+   else
+      echo "insatlling mysql-server........success"
+   fi
+else
+   echo "mysql-server is already present"
+fi
