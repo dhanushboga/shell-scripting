@@ -7,6 +7,9 @@ echo "Which user is running this script: $USER"
 echo "Process id of current script: $$"
 
 LOGS_FOLDER="/var/log/expense"
+LOG_FILE="$LOGS_FOLDER/$0.log"
+mkdir -p $LOGS_FOLDER
+
 
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]
