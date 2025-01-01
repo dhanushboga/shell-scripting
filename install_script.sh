@@ -7,7 +7,7 @@ then
    exit 1
 fi
 
-dnf list installed git
+dnf list installed giti
 
 if [ $? -ne 0 ]
   then
@@ -22,7 +22,7 @@ else
    echo "Git is already installed"
 fi
 
-dnf list installed mysql
+dnf list installed mysqll
 
 if [ $? -ne 0 ]
    then 
@@ -31,7 +31,7 @@ if [ $? -ne 0 ]
    then
       echo "installing mysql-server.......failure"
    else
-      echo "insatlling mysql-server........success"
+      echo "installing mysql-server........success"
    fi
 else
    echo "mysql-server is already present"
