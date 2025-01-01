@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "The Script Name : $0"
+
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]
 then
@@ -36,5 +38,5 @@ if [ $? -ne 0 ]
       echo "installing mysql........success"
    fi
 else
-   echo "mysql-server is already present"
+   echo "mysql is already present"
 fi
