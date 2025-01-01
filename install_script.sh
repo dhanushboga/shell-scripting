@@ -30,10 +30,10 @@ if [ $? -ne 0 ]
    dnf install mysql -y
    if [ $? -ne 0 ]
    then
-      echo "installing mysql-server.......failure"
+      echo "installing mysql.......failure"
       exit 1
    else
-      echo "installing mysql-server........success"
+      echo "installing mysql........success"
    fi
 else
    echo "mysql-server is already present"
