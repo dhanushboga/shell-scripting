@@ -1,6 +1,9 @@
 #!/bin/bash
 
-number=$1
+echo "enter the number : " $number
+read number
+
+#number=$1
 
 if [ $number -gt 1000 ]
 then
