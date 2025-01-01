@@ -6,9 +6,10 @@ echo "Home directory of current user: $HOME"
 echo "Which user is running this script: $USER"
 echo "Process id of current script: $$"
 
-LOGS_FOLDER="/var/log/expense"
+LOGS_FOLDER="/var/log/expense1"
 LOG_FILE="$LOGS_FOLDER/$0.log"
 mkdir -p $LOGS_FOLDER
+
 
 
 USER_ID=$(id -u)
