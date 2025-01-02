@@ -31,7 +31,6 @@ else
   echo -e "MYSQL is already.......$Y installed"
 fi
 
-
 dnf list installed git
 
 if [ $? -ne 0 ]
