@@ -6,7 +6,7 @@ G='\e[32m'
 Y='\e[33m'
 N='\e[0m'
 
-if [ USER_ID -ne 0 ]
+if [ $USER_ID -ne 0 ]
 then
   echo "error :: please run this script under superuser access"
   exit 1;
