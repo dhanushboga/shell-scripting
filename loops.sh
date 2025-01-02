@@ -1,10 +1,6 @@
 #!/bin/bash
-echo "enter the lower limit :"
-read lower
-echo "enter the upper limit : "
-read upper
 
-for i in {$lower..$upper}
+for i in {0..50}
 do
   echo $i
 done
