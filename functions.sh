@@ -13,15 +13,16 @@ VALIDATE(){
         echo "$2........failure"
     else
         echo "$2........success"
+    fi
 }
 
 dnf list installed mysql
 if [ $? -ne 0 ]
-then
-  dnf install mysql -y
-  VALIDATE $? "installing mysql"
-else
-  echo "mysql is already installed"
+   then
+     dnf install mysql -y
+     VALIDATE $? "installing mysql"
+   else
+     echo "mysql is already installed"
 fi
 
 dnf list installed git
