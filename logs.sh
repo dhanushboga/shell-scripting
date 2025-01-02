@@ -1,9 +1,10 @@
 #!/bin/bash
 
+
 LOG_FOLDER="/var/log/shell_script_logs"
 LOG_FILE=$(echo $0|cut -d '.' -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIME_STAMP.log
+LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIME_STAMP.log"
 
 USER_ID=$(id -u)
 R='\e[31m'
@@ -11,14 +12,15 @@ G='\e[32m'
 Y='\e[33m'
 N='\e[0m'
 
+
 if [ $USER_ID -ne 0 ]
 then
   echo "error :: please run this script under superuser access"
-  exit 1;
+  exit 1
 fi
 
 VALIDATE(){
-if [ $1 -ne 0 ]
+  if [ $? -ne 0 ]
   then
     echo -e "$2..........$R FAILURE $N"
   else
