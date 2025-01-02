@@ -8,7 +8,7 @@ then
 fi
 
 VALIDATE(){
-    IF [ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
       then
         echo "$2........failure"
     else
