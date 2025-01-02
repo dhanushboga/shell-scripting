@@ -28,6 +28,8 @@ VALIDATE(){
 fi
 }
 
+echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
 dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
@@ -35,7 +37,7 @@ then
   dnf install mysql -y
   VALIDATE $? "Installing MYSQL"
 else
-  echo -e "MYSQL is already.......$Y installed"
+  echo -e "MYSQL is already.......$Y installed $N"
 fi
 
 dnf list installed git &>>$LOG_FILE_NAME
@@ -45,5 +47,5 @@ then
   dnf install git -y &>>$LOG_FILE_NAME
   VALIDATE $? "Installing GIT"
 else
-  echo -e "GIT is already.........$Y installed"
+  echo -e "GIT is already.........$Y installed $N"
 fi
