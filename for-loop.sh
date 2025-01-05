@@ -33,7 +33,7 @@ echo "The Script $0 run at $TIME_STAMP"
 
 CHECK_ROOT
 
-mkdir -r $LOG_FOLDER &>>$LOG_FILE_NAME
+mkdir -p $LOG_FOLDER &>>$LOG_FILE_NAME
 VALIDATE $? "Creating Directory for Logs"
 
 for package in $@
