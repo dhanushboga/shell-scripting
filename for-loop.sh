@@ -14,9 +14,9 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-      echo "$2........FAILURE"
+      echo "$2........$R FAILURE $N"
     else
-      echo "$2........SUCCESS"
+      echo "$2........$G SUCCESS $N"
     fi
 }
 
@@ -32,9 +32,6 @@ fi
 echo "The Script $0 run at $TIME_STAMP"
 
 CHECK_ROOT
-
-mkdir -p $LOG_FOLDER &>>$LOG_FILE_NAME
-VALIDATE $? "Creating Directory for Logs"
 
 for package in $@
 do
