@@ -9,7 +9,7 @@ echo "The file content is $file_content"
 
 for word in $file_content
 do
-Length_of_each_word=$(echo $word | tr -d " \t\n\r" | wc -m | sort -n | head -n 1)
+Length_of_each_word=$(echo $word | tr -d " \t\n\r" | wc -m | sort -nr | head -n 1)
 count_of_words=$(echo $file_content | wc -w)
 done
 
