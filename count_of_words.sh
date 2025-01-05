@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "enter the file Name :"
-read file
 
+file="C:\Users\Bogad\devops\repos\shell-scripting\long_file.txt"
 file_content=$(cat $file)
 
 echo "The file content is $file_content"
