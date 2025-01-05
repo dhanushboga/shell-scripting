@@ -1,7 +1,9 @@
 #!/bin/bash
 
-while -r read $file;
+echo "enter the file Name :"
+read file
+
+for word in $file
 do
-Longest_word=$(echo $file | wc -l)
-echo "the Longest word in the file is :" $Longest_word"
-done >>> long_file.txt
+echo $word;
+done
