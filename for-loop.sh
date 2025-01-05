@@ -14,9 +14,9 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-      echo "$2........$R FAILURE $N"
+      echo -e "$2........$R FAILURE $N"
     else
-      echo "$2........$G SUCCESS $N"
+      echo -e "$2........$G SUCCESS $N"
     fi
 }
 
@@ -41,6 +41,6 @@ do
       dnf install $package -y &>>$LOG_FILE_NAME
       VALIDATE $? "Installing $package"
     else
-      echo "The $package is already installed"
+      echo -e "The $package $Y is already installed $N"
     fi
 done
