@@ -29,7 +29,7 @@ fi
 
 }
 
-The Script $0 run at $TIME_STAMP
+echo "The Script $0 run at $TIME_STAMP"
 
 CHECK_ROOT
 
