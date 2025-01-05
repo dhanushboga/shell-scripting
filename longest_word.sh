@@ -3,7 +3,5 @@
 echo "enter the file Name :"
 read file
 
-for word in $file
-do
-echo $word;
-done
+word=$(echo -n "$file" | wc -w)
+echo "The total number of words is $word"
