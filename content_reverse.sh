@@ -2,7 +2,7 @@
 
 file=long_file.txt
 
-rev_content=$(cat $file | tac )
+rev_content=$(tac $file)
 
 echo $rev_content
 
