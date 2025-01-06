@@ -2,7 +2,7 @@
 
 file=long_file.txt
 
-rev_content=$(cat $file | line )
+rev_content=$(cat $file | rev )
 
 for line in $rev_content
 do
