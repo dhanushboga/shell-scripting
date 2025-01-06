@@ -1,13 +1,8 @@
 #!/bin/bash
 
-reverse_content_file="\home\ec2-user\reverse-file"
-
 file=long_file.txt
 
-file_content=$(cat $file)
-echo "The file content is : $file_content"
-
-rev_content=$(cat $file_content | tac )
+rev_content=$(cat $file | tac )
 
 echo "The reverse content is : $rev_content"
 
