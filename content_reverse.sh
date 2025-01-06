@@ -2,9 +2,8 @@
 
 file=long_file.txt
 
-rev_content=$(tac $file)
+tac $file
 
-echo -e $rev_content
 
 
 
